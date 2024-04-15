@@ -114,7 +114,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        [ Html.Attributes.style "touch-action" "none" ]
+        [ ]
         [ Element.layout
             [ Element.width Element.fill
             , Element.height Element.fill
@@ -140,6 +140,7 @@ itemView dnd index item =
                 Element.el
                     (Element.Font.color (Element.rgb 1 1 1)
                         :: Element.htmlAttribute (Html.Attributes.id itemId)
+                        :: Element.htmlAttribute (Html.Attributes.style "touch-action" "none")
                         :: List.map Element.htmlAttribute (system.dropEvents index itemId)
                     )
                     (Element.text item)
@@ -155,6 +156,7 @@ itemView dnd index item =
             Element.el
                 (Element.Font.color (Element.rgb 1 1 1)
                     :: Element.htmlAttribute (Html.Attributes.id itemId)
+                    :: Element.htmlAttribute (Html.Attributes.style "touch-action" "none")
                     :: List.map Element.htmlAttribute (system.dragEvents index itemId)
                 )
                 (Element.text item)

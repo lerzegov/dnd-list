@@ -109,7 +109,6 @@ view : Model -> Html.Html Msg
 view model =
     Html.section
         [ Html.Attributes.style "text-align" "center"
-        , Html.Attributes.style "touch-action" "none"
         ]
         [ model.items
             |> List.indexedMap (itemView model.dnd)
@@ -129,7 +128,7 @@ itemView dnd index item =
         Just { dragIndex } ->
             if dragIndex /= index then
                 Html.p
-                    (Html.Attributes.id itemId :: system.dropEvents index itemId)
+                    ( Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: system.dropEvents index itemId )
                     [ Html.text item ]
 
             else
@@ -139,7 +138,7 @@ itemView dnd index item =
 
         Nothing ->
             Html.p
-                (Html.Attributes.id itemId :: system.dragEvents index itemId)
+                (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: system.dragEvents index itemId )
                 [ Html.text item ]
 
 
