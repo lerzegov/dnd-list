@@ -222,6 +222,7 @@ diskView model maybeTopDisk_ offset localIndex { width, startColor, solvedColor 
                     (Html.Attributes.id diskId
                         :: diskStyles width color
                         ++ placeholderStyles
+                        ++ draggableStyles
                     )
                     []
 
@@ -229,6 +230,7 @@ diskView model maybeTopDisk_ offset localIndex { width, startColor, solvedColor 
                 Html.div
                     (Html.Attributes.id diskId
                         :: diskStyles width color
+                        ++ draggableStyles
                     )
                     []
 
@@ -247,6 +249,7 @@ diskView model maybeTopDisk_ offset localIndex { width, startColor, solvedColor 
                         :: diskStyles width color
                         ++ cursorStyles
                         ++ system.dragEvents globalIndex diskId
+                        ++ draggableStyles
                     )
                     []
 
@@ -254,6 +257,7 @@ diskView model maybeTopDisk_ offset localIndex { width, startColor, solvedColor 
                 Html.div
                     (Html.Attributes.id diskId
                         :: diskStyles width color
+                        ++ draggableStyles
                     )
                     []
 
@@ -321,7 +325,6 @@ sectionStyles =
     , Html.Attributes.style "flex-wrap" "wrap"
     , Html.Attributes.style "justify-content" "center"
     , Html.Attributes.style "padding-bottom" "2em"
-    , Html.Attributes.style "touch-action" "none"
     ]
 
 
@@ -353,6 +356,10 @@ auxiliaryStyles =
     , Html.Attributes.style "margin-bottom" "0"
     , Html.Attributes.style "height" "auto"
     ]
+
+draggableStyles : List (Html.Attribute msg)
+draggableStyles =
+    [ Html.Attributes.style "touch-action" "none" ]
 
 
 placeholderStyles : List (Html.Attribute msg)
