@@ -306,7 +306,6 @@ sectionStyles =
     , Html.Attributes.style "flex-direction" "column"
     , Html.Attributes.style "align-items" "center"
     , Html.Attributes.style "padding-top" "2em"
-    , Html.Attributes.style "touch-action" "none"
     ]
 
 
@@ -330,4 +329,5 @@ itemStyles color =
     , Html.Attributes.style "display" "flex"
     , Html.Attributes.style "align-items" "center"
     , Html.Attributes.style "justify-content" "center"
+    , Html.Attributes.style "touch-action" "none"
     ]
