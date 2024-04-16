@@ -143,7 +143,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        (Html.Attributes.style "touch-action" "none" :: sectionStyles)
+         sectionStyles
         [ groupView model Left lightRed
         , groupView model Right lightBlue
         , ghostView model.dnd model.items
@@ -174,6 +174,7 @@ itemView model offset localIndex { group, value, color } =
             if color == transparent && value == "footer" && dragItem.group /= group then
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: auxiliaryStyles
                         ++ system.dropEvents globalIndex itemId
                     )
@@ -182,6 +183,7 @@ itemView model offset localIndex { group, value, color } =
             else if color == transparent && value == "footer" && dragItem.group == group then
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: auxiliaryStyles
                     )
                     []
@@ -189,6 +191,7 @@ itemView model offset localIndex { group, value, color } =
             else if dragIndex /= globalIndex then
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: itemStyles color
                         ++ system.dropEvents globalIndex itemId
                     )
@@ -197,6 +200,7 @@ itemView model offset localIndex { group, value, color } =
             else
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: itemStyles gray
                     )
                     []
@@ -205,6 +209,7 @@ itemView model offset localIndex { group, value, color } =
             if color == transparent && value == "footer" then
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: auxiliaryStyles
                     )
                     []
@@ -212,6 +217,7 @@ itemView model offset localIndex { group, value, color } =
             else
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: itemStyles color
                         ++ system.dragEvents globalIndex itemId
                     )
