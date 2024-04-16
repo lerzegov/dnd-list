@@ -118,7 +118,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        [ Html.Attributes.style "touch-action" "none" ]
+        [ ]
         [ model.items
             |> List.indexedMap (itemView model.dnd)
             |> Html.Keyed.node "div" containerStyles
@@ -138,21 +138,21 @@ itemView dnd index ( key, item ) =
             if dragIndex /= index then
                 ( key
                 , Html.div
-                    (Html.Attributes.id itemId :: itemStyles green ++ system.dropEvents index itemId)
+                    (Html.Attributes.style "touch-action" "none" :: Html.Attributes.id itemId :: itemStyles green ++ system.dropEvents index itemId)
                     [ Html.text item ]
                 )
 
             else
                 ( key
                 , Html.div
-                    (Html.Attributes.id itemId :: itemStyles "dimgray")
+                    (Html.Attributes.style "touch-action" "none" :: Html.Attributes.id itemId :: itemStyles "dimgray")
                     []
                 )
 
         Nothing ->
             ( key
             , Html.div
-                (Html.Attributes.id itemId :: itemStyles green ++ system.dragEvents index itemId)
+                (Html.Attributes.style "touch-action" "none" :: Html.Attributes.id itemId :: itemStyles green ++ system.dragEvents index itemId)
                 [ Html.text item ]
             )
 
