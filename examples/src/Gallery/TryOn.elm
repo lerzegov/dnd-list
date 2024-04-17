@@ -194,6 +194,7 @@ colorView model index item =
         Just _ ->
             Html.div
                 (Html.Attributes.id id
+                    :: Html.Attributes.style "touch-action" "none"
                     :: colorStyles width height item.color
                     ++ [ Html.Attributes.style "cursor" "pointer" ]
                 )
@@ -202,6 +203,7 @@ colorView model index item =
         _ ->
             Html.div
                 (Html.Attributes.id id
+                    :: Html.Attributes.style "touch-action" "none" 
                     :: colorStyles width height item.color
                     ++ Html.Attributes.style "cursor" "pointer"
                     :: system.dragEvents index id
@@ -231,20 +233,24 @@ sizeView model offset localIndex item =
     case system.info model.dnd of
         Just { dragIndex } ->
             if dragIndex /= globalIndex then
-                Html.div wrapperStyles
+                Html.div 
+                    (Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView width height item.color (Html.Attributes.id id :: system.dropEvents globalIndex id) ]
 
             else
-                Html.div wrapperStyles
+                Html.div 
+                    (Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView width height "dimgray" (Html.Attributes.id id :: system.dropEvents globalIndex id) ]
 
         _ ->
             if item.color /= "dimgray" then
-                Html.div wrapperStyles
+                Html.div 
+                    (Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView width height item.color (Html.Attributes.id id :: Html.Attributes.style "cursor" "pointer" :: system.dragEvents globalIndex id) ]
 
             else
-                Html.div wrapperStyles
+                Html.div
+                    (Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView width height item.color [ Html.Attributes.id id ] ]
 
 
@@ -316,7 +322,6 @@ sectionStyles =
     , Html.Attributes.style "align-items" "center"
     , Html.Attributes.style "justify-content" "center"
     , Html.Attributes.style "padding-top" "2rem"
-    , Html.Attributes.style "touch-action" "none"
     ]
 
 
