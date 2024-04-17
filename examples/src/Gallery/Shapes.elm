@@ -183,7 +183,7 @@ update message model =
 
 view : Model -> Html.Html Msg
 view model =
-    Html.section [ Html.Attributes.style "touch-action" "none" ]
+    Html.section [ ]
         [ scoreView model.items
         , model.items
             |> List.take shapeNumber
@@ -222,23 +222,23 @@ shapeView dnd index { shape, color, solved } =
         Just { dragIndex } ->
             if dragIndex /= index then
                 Html.div
-                    wrapperStyles
+                    ( Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView shape color [ Html.Attributes.id itemId ] ]
 
             else
                 Html.div
-                    wrapperStyles
+                    ( Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     []
 
         _ ->
             if solved then
                 Html.div
-                    wrapperStyles
+                    ( Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     []
 
             else
                 Html.div
-                    wrapperStyles
+                    ( Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView shape color (Html.Attributes.id itemId :: system.dragEvents index itemId) ]
 
 
