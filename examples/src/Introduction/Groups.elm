@@ -143,7 +143,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-         sectionStyles
+        sectionStyles
         [ groupView model Left lightRed
         , groupView model Right lightBlue
         , ghostView model.dnd model.items

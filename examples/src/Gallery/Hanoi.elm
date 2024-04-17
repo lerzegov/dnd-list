@@ -357,6 +357,7 @@ auxiliaryStyles =
     , Html.Attributes.style "height" "auto"
     ]
 
+
 draggableStyles : List (Html.Attribute msg)
 draggableStyles =
     [ Html.Attributes.style "touch-action" "none" ]

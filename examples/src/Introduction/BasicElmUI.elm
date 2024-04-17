@@ -114,7 +114,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        [ ]
+        []
         [ Element.layout
             [ Element.width Element.fill
             , Element.height Element.fill

@@ -203,7 +203,7 @@ colorView model index item =
         _ ->
             Html.div
                 (Html.Attributes.id id
-                    :: Html.Attributes.style "touch-action" "none" 
+                    :: Html.Attributes.style "touch-action" "none"
                     :: colorStyles width height item.color
                     ++ Html.Attributes.style "cursor" "pointer"
                     :: system.dragEvents index id
@@ -233,18 +233,18 @@ sizeView model offset localIndex item =
     case system.info model.dnd of
         Just { dragIndex } ->
             if dragIndex /= globalIndex then
-                Html.div 
+                Html.div
                     (Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView width height item.color (Html.Attributes.id id :: system.dropEvents globalIndex id) ]
 
             else
-                Html.div 
+                Html.div
                     (Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView width height "dimgray" (Html.Attributes.id id :: system.dropEvents globalIndex id) ]
 
         _ ->
             if item.color /= "dimgray" then
-                Html.div 
+                Html.div
                     (Html.Attributes.style "touch-action" "none" :: wrapperStyles)
                     [ svgView width height item.color (Html.Attributes.id id :: Html.Attributes.style "cursor" "pointer" :: system.dragEvents globalIndex id) ]
 

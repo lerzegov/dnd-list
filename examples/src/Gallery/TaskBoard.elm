@@ -189,7 +189,7 @@ view model =
         calculateOffset columnIndex =
             columns |> List.map List.length |> List.take columnIndex |> List.foldl (+) 0
     in
-    Html.section [ ]
+    Html.section []
         [ columns
             |> List.indexedMap (\i column -> columnView model (calculateOffset i) i column)
             |> Html.div boardStyles
@@ -244,7 +244,8 @@ columnView model offset index cards =
                     :: columnStyles "transparent"
                 )
                 [ Html.h3
-                    (Html.Attributes.style "touch-action" "none" :: columnHeadingStyles heading.color
+                    (Html.Attributes.style "touch-action" "none"
+                        :: columnHeadingStyles heading.color
                         ++ columnSystem.dragEvents index columnId
                     )
                     [ Html.text heading.title ]

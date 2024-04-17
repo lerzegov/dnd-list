@@ -136,7 +136,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        [ ]
+        []
         [ List.map2 (\color spot -> ( color, spot )) model.colors spots
             |> List.indexedMap (itemView model)
             |> Html.div containerStyles

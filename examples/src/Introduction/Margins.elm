@@ -112,7 +112,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        [ ]
+        []
         [ model.items
             |> List.indexedMap (itemView model.dnd)
             |> Html.div containerStyles

@@ -128,7 +128,7 @@ itemView dnd index item =
         Just { dragIndex } ->
             if dragIndex /= index then
                 Html.p
-                    ( Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: system.dropEvents index itemId )
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: system.dropEvents index itemId)
                     [ Html.text item ]
 
             else
@@ -138,7 +138,7 @@ itemView dnd index item =
 
         Nothing ->
             Html.p
-                (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: system.dragEvents index itemId )
+                (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: system.dragEvents index itemId)
                 [ Html.text item ]
 
 

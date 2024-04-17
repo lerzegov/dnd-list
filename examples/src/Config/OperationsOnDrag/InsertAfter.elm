@@ -191,7 +191,7 @@ itemView dnd index { value, color } =
 
             else
                 Html.div
-                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none":: itemStyles dropColor)
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles dropColor)
                     []
 
         _ ->
