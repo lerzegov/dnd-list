@@ -134,7 +134,6 @@ view : Model -> Html.Html Msg
 view model =
     Html.section
         [ Html.Events.onMouseDown ClearAffected
-        , Html.Attributes.style "touch-action" "none"
         ]
         [ model.items
             |> List.indexedMap (itemView model.dnd model.affected)
@@ -153,6 +152,7 @@ itemView dnd affected index item =
         attrs : List (Html.Attribute msg)
         attrs =
             Html.Attributes.id itemId
+                :: Html.Attributes.style "touch-action" "none"
                 :: itemStyles
                 ++ (if List.member index affected then
                         affectedStyles

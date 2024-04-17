@@ -134,7 +134,6 @@ view : Model -> Html.Html Msg
 view model =
     Html.section
         [ Html.Events.onMouseDown ClearAffected
-        , Html.Attributes.style "touch-action" "none"
         ]
         [ model.items
             |> List.indexedMap (itemView model.dnd model.affected)
@@ -165,17 +164,17 @@ itemView dnd affected index item =
         Just { dragIndex } ->
             if dragIndex /= index then
                 Html.div
-                    (attrs ++ system.dropEvents index itemId)
+                    (Html.Attributes.style "touch-action" "none" :: attrs ++ system.dropEvents index itemId)
                     [ Html.text item ]
 
             else
                 Html.div
-                    (attrs ++ placeholderStyles)
+                    (Html.Attributes.style "touch-action" "none" :: attrs ++ placeholderStyles)
                     []
 
         Nothing ->
             Html.div
-                (attrs ++ system.dragEvents index itemId)
+                (Html.Attributes.style "touch-action" "none" :: attrs ++ system.dragEvents index itemId)
                 [ Html.text item ]
 
 
