@@ -189,7 +189,7 @@ view model =
         calculateOffset columnIndex =
             columns |> List.map List.length |> List.take columnIndex |> List.foldl (+) 0
     in
-    Html.section [ Html.Attributes.style "touch-action" "none" ]
+    Html.section [ ]
         [ columns
             |> List.indexedMap (\i column -> columnView model (calculateOffset i) i column)
             |> Html.div boardStyles
@@ -218,7 +218,7 @@ columnView model offset index cards =
                         ++ columnSystem.dropEvents index columnId
                     )
                     [ Html.h3
-                        (columnHeadingStyles heading.color)
+                        (Html.Attributes.style "touch-action" "none" :: columnHeadingStyles heading.color)
                         [ Html.text heading.title ]
                     , cards
                         |> List.map eventlessCardView
@@ -244,7 +244,7 @@ columnView model offset index cards =
                     :: columnStyles "transparent"
                 )
                 [ Html.h3
-                    (columnHeadingStyles heading.color
+                    (Html.Attributes.style "touch-action" "none" :: columnHeadingStyles heading.color
                         ++ columnSystem.dragEvents index columnId
                     )
                     [ Html.text heading.title ]
@@ -283,17 +283,17 @@ eventfulCardView model offset localIndex { activity, description } =
 
             else if description == "" && activity == dragCard.activity then
                 Html.div
-                    (Html.Attributes.id cardId :: auxiliaryCardStyles)
+                    (Html.Attributes.id cardId :: Html.Attributes.style "touch-action" "none" :: auxiliaryCardStyles)
                     []
 
             else if globalIndex /= dragIndex then
                 Html.div
-                    (Html.Attributes.id cardId :: cardStyles yellow ++ cardSystem.dropEvents globalIndex cardId)
+                    (Html.Attributes.id cardId :: Html.Attributes.style "touch-action" "none" :: cardStyles yellow ++ cardSystem.dropEvents globalIndex cardId)
                     [ Html.text description ]
 
             else
                 Html.div
-                    (Html.Attributes.id cardId :: cardStyles gray)
+                    (Html.Attributes.id cardId :: Html.Attributes.style "touch-action" "none" :: cardStyles gray)
                     []
 
         _ ->
@@ -304,7 +304,7 @@ eventfulCardView model offset localIndex { activity, description } =
 
             else
                 Html.div
-                    (Html.Attributes.id cardId :: cardStyles yellow ++ cursorStyles ++ cardSystem.dragEvents globalIndex cardId)
+                    (Html.Attributes.id cardId :: Html.Attributes.style "touch-action" "none" :: cardStyles yellow ++ cursorStyles ++ cardSystem.dragEvents globalIndex cardId)
                     [ Html.text description ]
 
 
