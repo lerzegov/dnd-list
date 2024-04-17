@@ -162,7 +162,7 @@ update message model =
 
 view : Model -> Html.Html Msg
 view model =
-    Html.section [ Html.Attributes.style "touch-action" "none" ]
+    Html.section [ ]
         [ List.map2 Tuple.pair indices8x8 model.squares
             |> List.indexedMap (squareView model.dnd model.solved)
             |> Html.div containerStyles
@@ -222,7 +222,7 @@ squareView dnd solved index5 ( index8, square ) =
         Nothing ->
             if square == "N" then
                 Html.div
-                    (Html.Attributes.id id :: squareStyles color ++ cursorStyles ++ system.dragEvents index5 id)
+                    (Html.Attributes.id id :: Html.Attributes.style "touch-action" "none" :: squareStyles color ++ cursorStyles ++ system.dragEvents index5 id)
                     [ knight ]
 
             else
