@@ -133,7 +133,7 @@ itemView dnd index item =
 
             else
                 Html.p
-                    [ Html.Attributes.id itemId ]
+                    [ Html.Attributes.id itemId, Html.Attributes.style "touch-action" "none" ]
                     [ Html.text "[---------]" ]
 
         Nothing ->

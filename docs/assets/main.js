@@ -18779,7 +18779,8 @@ var $author$project$Introduction$Basic$itemView = F3(
 				$elm$html$Html$p,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$id(itemId)
+						$elm$html$Html$Attributes$id(itemId),
+						A2($elm$html$Html$Attributes$style, 'touch-action', 'none')
 					]),
 				_List_fromArray(
 					[
