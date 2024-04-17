@@ -163,7 +163,6 @@ view : Model -> Html.Html Msg
 view model =
     Html.section
         [ Html.Events.onMouseDown ResetColors
-        , Html.Attributes.style "touch-action" "none"
         ]
         [ model.items
             |> List.indexedMap (itemView model.dnd)
@@ -183,22 +182,22 @@ itemView dnd index { value, color } =
         Just { dragIndex, dropIndex } ->
             if index /= dragIndex && index /= dropIndex then
                 Html.div
-                    (Html.Attributes.id itemId :: itemStyles color ++ system.dropEvents index itemId)
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles color ++ system.dropEvents index itemId)
                     [ Html.text value ]
 
             else if index /= dragIndex && index == dropIndex then
                 Html.div
-                    (Html.Attributes.id itemId :: itemStyles dropColor ++ system.dropEvents index itemId)
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles dropColor ++ system.dropEvents index itemId)
                     [ Html.text value ]
 
             else
                 Html.div
-                    (Html.Attributes.id itemId :: itemStyles dropColor)
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles dropColor)
                     []
 
         _ ->
             Html.div
-                (Html.Attributes.id itemId :: itemStyles color ++ system.dragEvents index itemId)
+                (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles color ++ system.dragEvents index itemId)
                 [ Html.text value ]
 
 
