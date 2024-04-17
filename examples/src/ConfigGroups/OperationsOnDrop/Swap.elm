@@ -166,7 +166,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        (Html.Events.onMouseDown ResetColors :: Html.Attributes.style "touch-action" "none" :: sectionStyles)
+        (Html.Events.onMouseDown ResetColors :: sectionStyles)
         [ groupView model 1
         , groupView model 2
         , groupView model 3
@@ -197,22 +197,22 @@ itemView model offset localIndex { value, color } =
         Just { dragIndex, dropIndex } ->
             if globalIndex /= dragIndex && globalIndex /= dropIndex then
                 Html.div
-                    (Html.Attributes.id itemId :: itemStyles color ++ system.dropEvents globalIndex itemId)
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles color ++ system.dropEvents globalIndex itemId)
                     [ Html.text value ]
 
             else if globalIndex /= dragIndex && globalIndex == dropIndex then
                 Html.div
-                    (Html.Attributes.id itemId :: itemStyles dropColor ++ system.dropEvents globalIndex itemId)
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles dropColor ++ system.dropEvents globalIndex itemId)
                     [ Html.text value ]
 
             else
                 Html.div
-                    (Html.Attributes.id itemId :: itemStyles dropColor)
+                    (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles dropColor)
                     []
 
         _ ->
             Html.div
-                (Html.Attributes.id itemId :: itemStyles color ++ system.dragEvents globalIndex itemId)
+                (Html.Attributes.id itemId :: Html.Attributes.style "touch-action" "none" :: itemStyles color ++ system.dragEvents globalIndex itemId)
                 [ Html.text value ]
 
 
