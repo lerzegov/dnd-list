@@ -184,7 +184,7 @@ update message model =
 
 view : Model -> Html.Html Msg
 view model =
-    Html.section [ Html.Attributes.style "touch-action" "none" ]
+    Html.section [ ]
         [ List.range 0 3
             |> List.map
                 (\i ->
@@ -218,6 +218,7 @@ itemView dnd offset localIndex { value, color } =
             if dragIndex /= globalIndex && dropIndex /= globalIndex then
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: itemStyles color
                         ++ system.dropEvents globalIndex itemId
                     )
@@ -226,6 +227,7 @@ itemView dnd offset localIndex { value, color } =
             else if dragIndex /= globalIndex && dropIndex == globalIndex then
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: itemStyles color
                         ++ dropStyles
                         ++ system.dropEvents globalIndex itemId
@@ -235,6 +237,7 @@ itemView dnd offset localIndex { value, color } =
             else
                 Html.div
                     (Html.Attributes.id itemId
+                        :: Html.Attributes.style "touch-action" "none"
                         :: itemStyles gray
                     )
                     []
@@ -242,6 +245,7 @@ itemView dnd offset localIndex { value, color } =
         _ ->
             Html.div
                 (Html.Attributes.id itemId
+                    :: Html.Attributes.style "touch-action" "none"
                     :: itemStyles color
                     ++ system.dragEvents globalIndex itemId
                 )
