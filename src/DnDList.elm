@@ -287,6 +287,9 @@ type alias System a msg =
     , dropEvents : DropIndex -> DropElementId -> List (Html.Attribute msg)
     , ghostStyles : Model -> List (Html.Attribute msg)
     , info : Model -> Maybe Info
+
+    -- , onPointerMove : Json.Decode.Decoder msg
+    -- , onPointerUp : Json.Decode.Decoder msg
     }
 
 
@@ -318,6 +321,10 @@ create config stepMsg =
     , dropEvents = dropEvents stepMsg
     , ghostStyles = ghostStyles config.movement
     , info = info
+
+    -- todo: these don't make sense without touch
+    -- , onPointerMove = onPointerMove2 stepMsg
+    -- , onPointerUp = onPointerUp2 stepMsg
     }
 
 
@@ -368,6 +375,9 @@ createWithTouch config stepMsg onPointerMove onPointerUp releasePointerCapture =
     , dropEvents = dropEventsWithTouch stepMsg
     , ghostStyles = ghostStyles config.movement
     , info = info
+
+    -- , onPointerMove = onPointerMove2 stepMsg
+    -- , onPointerUp = onPointerUp2 stepMsg
     }
 
 
@@ -586,6 +596,19 @@ subscriptions stepMsg (Model model) =
                 ]
 
 
+
+-- onPointerMove2 : (Msg -> msg) -> Json.Decode.Decoder msg
+-- onPointerMove2 stepMsg =
+--     Internal.Common.Utils.decodeCoordinates
+--         |> Json.Decode.map Drag
+--         -- |> Json.Decode.map (\v -> Debug.log "onPointerMove2" (stepMsg v))
+--         |> Json.Decode.map stepMsg
+-- onPointerUp2 : (Msg -> msg) -> Json.Decode.Decoder msg
+-- onPointerUp2 stepMsg =
+--     stepMsg DragEnd
+--         |> Json.Decode.succeed
+
+
 subscriptionsWithTouch : (Msg -> msg) -> ((Json.Encode.Value -> msg) -> Sub msg) -> ((Json.Encode.Value -> msg) -> Sub msg) -> Model -> Sub msg
 subscriptionsWithTouch stepMsg onPointerMove onPointerUp (Model model) =
     case model of
@@ -792,7 +815,7 @@ update { beforeUpdate, listen, operation } msg (Model model) list =
 
         GotDropElement (Ok dropElement) ->
             ( model
-                |> Maybe.map (\state -> { state | dropElement = Just dropElement })
+                |> Maybe.map (\state -> { state | dropElement = Just dropElement, dragCounter = state.dragCounter + 1 })
                 |> Model
             , list
             )
