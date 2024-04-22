@@ -6,7 +6,6 @@ import DnDList
 import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
-import Json.Encode
 import Path
 import Url.Builder
 

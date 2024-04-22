@@ -25,7 +25,7 @@
 
       app.ports.releasePointerCapture.subscribe( event => {
         event.target.releasePointerCapture(event.pointerId)
-		  })
+      })
 
       window.addEventListener("pointermove", (event) => {
         app.ports.onPointerMove.send(event);

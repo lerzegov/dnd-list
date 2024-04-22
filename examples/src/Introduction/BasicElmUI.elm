@@ -7,7 +7,6 @@ import Element.Font
 import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
-import Json.Encode
 
 
 

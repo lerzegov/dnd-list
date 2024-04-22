@@ -5,7 +5,6 @@ import DnDList
 import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
-import Json.Encode
 
 
 main : Program () Model Msg

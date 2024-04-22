@@ -6,7 +6,6 @@ import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
 import Html.Keyed
-import Json.Encode
 
 
 
