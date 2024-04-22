@@ -7,6 +7,10 @@ import Html
 import Html.Attributes
 
 
+
+-- MAIN
+
+
 main : Program () Model Msg
 main =
     Browser.element
@@ -107,8 +111,7 @@ update message model =
 view : Model -> Html.Html Msg
 view model =
     Html.section
-        [ Html.Attributes.style "text-align" "center"
-        ]
+        [ Html.Attributes.style "text-align" "center" ]
         [ model.items
             |> List.indexedMap (itemView model.dnd)
             |> Html.div []
