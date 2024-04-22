@@ -228,22 +228,22 @@ codeView : Model -> Html.Html Msg
 codeView model =
     case model of
         Hanoi _ ->
-            toCode "https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Hanoi.elm"
+            toCode "https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Hanoi.elm"
 
         Puzzle _ ->
-            toCode "https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Puzzle.elm"
+            toCode "https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Puzzle.elm"
 
         Shapes _ ->
-            toCode "https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Shapes.elm"
+            toCode "https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Shapes.elm"
 
         Knight _ ->
-            toCode "https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Knight.elm"
+            toCode "https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Knight.elm"
 
         TryOn _ ->
-            toCode "https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/TryOn.elm"
+            toCode "https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/TryOn.elm"
 
         TaskBoard _ ->
-            toCode "https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/TaskBoard.elm"
+            toCode "https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/TaskBoard.elm"
 
 
 toCode : String -> Html.Html msg
