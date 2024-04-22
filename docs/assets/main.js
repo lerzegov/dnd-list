@@ -12712,17 +12712,17 @@ var $author$project$Config$Root$toCode = function (url) {
 var $author$project$Config$Movement$Root$url = function (id) {
 	switch (id) {
 		case 0:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/Movement/FreeOnDrag.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/Movement/FreeOnDrag.elm';
 		case 1:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/Movement/FreeOnDrop.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/Movement/FreeOnDrop.elm';
 		case 2:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/Movement/HorizontalOnDrag.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/Movement/HorizontalOnDrag.elm';
 		case 3:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/Movement/HorizontalOnDrop.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/Movement/HorizontalOnDrop.elm';
 		case 4:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/Movement/VerticalOnDrag.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/Movement/VerticalOnDrag.elm';
 		case 5:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/Movement/VerticalOnDrop.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/Movement/VerticalOnDrop.elm';
 		default:
 			return '';
 	}
@@ -12730,15 +12730,15 @@ var $author$project$Config$Movement$Root$url = function (id) {
 var $author$project$Config$OperationsOnDrag$Root$url = function (id) {
 	switch (id) {
 		case 0:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrag/InsertAfter.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrag/InsertAfter.elm';
 		case 1:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrag/InsertBefore.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrag/InsertBefore.elm';
 		case 2:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrag/Rotate.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrag/Rotate.elm';
 		case 3:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrag/Swap.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrag/Swap.elm';
 		case 4:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrag/Unaltered.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrag/Unaltered.elm';
 		default:
 			return '';
 	}
@@ -12746,15 +12746,15 @@ var $author$project$Config$OperationsOnDrag$Root$url = function (id) {
 var $author$project$Config$OperationsOnDrop$Root$url = function (id) {
 	switch (id) {
 		case 0:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrop/InsertAfter.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrop/InsertAfter.elm';
 		case 1:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrop/InsertBefore.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrop/InsertBefore.elm';
 		case 2:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrop/Rotate.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrop/Rotate.elm';
 		case 3:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrop/Swap.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrop/Swap.elm';
 		case 4:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Config/OperationsOnDrop/Unaltered.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Config/OperationsOnDrop/Unaltered.elm';
 		default:
 			return '';
 	}
@@ -12787,13 +12787,13 @@ var $author$project$ConfigGroups$Root$toCode = function (url) {
 var $author$project$ConfigGroups$OperationsOnDrag$Root$url = function (id) {
 	switch (id) {
 		case 0:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/InsertAfter.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/InsertAfter.elm';
 		case 1:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/InsertBefore.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/InsertBefore.elm';
 		case 2:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/Rotate.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/Rotate.elm';
 		case 3:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/Swap.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrag/Swap.elm';
 		default:
 			return '';
 	}
@@ -12801,13 +12801,13 @@ var $author$project$ConfigGroups$OperationsOnDrag$Root$url = function (id) {
 var $author$project$ConfigGroups$OperationsOnDrop$Root$url = function (id) {
 	switch (id) {
 		case 0:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/InsertAfter.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/InsertAfter.elm';
 		case 1:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/InsertBefore.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/InsertBefore.elm';
 		case 2:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/Rotate.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/Rotate.elm';
 		case 3:
-			return 'https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/Swap.elm';
+			return 'https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/ConfigGroups/OperationsOnDrop/Swap.elm';
 		default:
 			return '';
 	}
@@ -12835,17 +12835,17 @@ var $author$project$Gallery$Root$toCode = function (url) {
 var $author$project$Gallery$Root$codeView = function (model) {
 	switch (model.$) {
 		case 0:
-			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Hanoi.elm');
+			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Hanoi.elm');
 		case 1:
-			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Puzzle.elm');
+			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Puzzle.elm');
 		case 2:
-			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Shapes.elm');
+			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Shapes.elm');
 		case 3:
-			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/Knight.elm');
+			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/Knight.elm');
 		case 4:
-			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/TryOn.elm');
+			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/TryOn.elm');
 		default:
-			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Gallery/TaskBoard.elm');
+			return $author$project$Gallery$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Gallery/TaskBoard.elm');
 	}
 };
 var $author$project$Introduction$Root$toCode = function (url) {
@@ -12860,23 +12860,23 @@ var $author$project$Introduction$Root$toCode = function (url) {
 var $author$project$Introduction$Root$codeView = function (model) {
 	switch (model.$) {
 		case 0:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Basic.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Basic.elm');
 		case 1:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/BasicElmUI.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/BasicElmUI.elm');
 		case 2:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Handle.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Handle.elm');
 		case 3:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Keyed.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Keyed.elm');
 		case 4:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Margins.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Margins.elm');
 		case 5:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Masonry.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Masonry.elm');
 		case 6:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Resize.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Resize.elm');
 		case 7:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Independents.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Independents.elm');
 		default:
-			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/ceddlyburge/dnd-list/master/examples/src/Introduction/Groups.elm');
+			return $author$project$Introduction$Root$toCode('https://raw.githubusercontent.com/annaghi/dnd-list/master/examples/src/Introduction/Groups.elm');
 	}
 };
 var $elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
