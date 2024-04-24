@@ -2,9 +2,9 @@ module Gallery.Shapes exposing (Model, Msg, initialModel, main, subscriptions, u
 
 import Browser
 import DnDList
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Svg
 import Svg.Attributes
 

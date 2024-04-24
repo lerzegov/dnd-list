@@ -4,9 +4,9 @@ import Browser
 import DnDList
 import Element
 import Element.Font
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 

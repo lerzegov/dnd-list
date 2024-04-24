@@ -3,9 +3,9 @@ module Gallery.TaskBoard exposing (Model, Msg, initialModel, main, subscriptions
 import Browser
 import DnDList
 import DnDList.Groups
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 

@@ -2,10 +2,10 @@ module Config.OperationsOnDrag.Swap exposing (Model, Msg, initialModel, main, su
 
 import Browser
 import DnDList
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
 import Html.Events
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 

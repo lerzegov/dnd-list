@@ -2,10 +2,10 @@ module ConfigGroups.OperationsOnDrag.InsertAfter exposing (Model, Msg, initialMo
 
 import Browser
 import DnDList.Groups
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
 import Html.Events
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 

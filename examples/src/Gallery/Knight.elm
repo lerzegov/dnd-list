@@ -3,10 +3,10 @@ module Gallery.Knight exposing (Model, Msg, initialModel, main, subscriptions, u
 import Bitwise
 import Browser
 import DnDList
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
 import Path
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Url.Builder
 
 

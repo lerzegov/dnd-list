@@ -2,9 +2,9 @@ module Introduction.Margins exposing (Model, Msg, initialModel, main, subscripti
 
 import Browser
 import DnDList
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 

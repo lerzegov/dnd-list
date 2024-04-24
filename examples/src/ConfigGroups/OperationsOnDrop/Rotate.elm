@@ -2,10 +2,10 @@ module ConfigGroups.OperationsOnDrop.Rotate exposing (Model, Msg, initialModel, 
 
 import Browser
 import DnDList.Groups
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
 import Html.Events
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 

@@ -2,9 +2,9 @@ module Gallery.Puzzle exposing (Model, Msg, commands, initialModel, main, subscr
 
 import Browser
 import DnDList.Groups
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Random
 
 

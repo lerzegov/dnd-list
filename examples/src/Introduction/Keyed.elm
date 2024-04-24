@@ -2,10 +2,10 @@ module Introduction.Keyed exposing (Model, Msg, initialModel, main, subscription
 
 import Browser
 import DnDList
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
 import Html.Keyed
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 

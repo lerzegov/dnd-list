@@ -2,10 +2,10 @@ module ConfigGroups.OperationsOnDrop.InsertBefore exposing (Model, Msg, initialM
 
 import Browser
 import DnDList.Groups
-import Home exposing (onPointerMove, onPointerUp, releasePointerCapture)
 import Html
 import Html.Attributes
 import Html.Events
+import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
 
 
 
