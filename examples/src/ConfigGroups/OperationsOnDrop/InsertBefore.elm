@@ -5,7 +5,7 @@ import DnDList.Groups
 import Html
 import Html.Attributes
 import Html.Events
-import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
+import Port
 
 
 
@@ -80,7 +80,7 @@ setter item1 item2 =
 
 system : DnDList.Groups.System Item Msg
 system =
-    DnDList.Groups.createWithTouch config MyMsg onPointerMove onPointerUp releasePointerCapture
+    DnDList.Groups.createWithTouch config MyMsg Port.onPointerMove Port.onPointerUp Port.releasePointerCapture
 
 
 beforeUpdate : Int -> Int -> List Item -> List Item

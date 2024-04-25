@@ -6,7 +6,7 @@ import DnDList
 import Html
 import Html.Attributes
 import Path
-import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
+import Port
 import Url.Builder
 
 
@@ -78,7 +78,7 @@ config =
 
 system : DnDList.System Square Msg
 system =
-    DnDList.createWithTouch config MyMsg onPointerMove onPointerUp releasePointerCapture
+    DnDList.createWithTouch config MyMsg Port.onPointerMove Port.onPointerUp Port.releasePointerCapture
 
 
 beforeUpdate : Int -> Int -> List Square -> List Square

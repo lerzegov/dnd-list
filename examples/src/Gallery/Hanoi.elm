@@ -4,7 +4,7 @@ import Browser
 import DnDList
 import Html
 import Html.Attributes
-import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
+import Port
 
 
 
@@ -60,7 +60,7 @@ config =
 
 system : DnDList.System Disk Msg
 system =
-    DnDList.createWithTouch config MyMsg onPointerMove onPointerUp releasePointerCapture
+    DnDList.createWithTouch config MyMsg Port.onPointerMove Port.onPointerUp Port.releasePointerCapture
 
 
 updateTower : Int -> Int -> List Disk -> List Disk

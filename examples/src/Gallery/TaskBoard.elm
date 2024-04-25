@@ -5,7 +5,7 @@ import DnDList
 import DnDList.Groups
 import Html
 import Html.Attributes
-import Port exposing (onPointerMove, onPointerUp, releasePointerCapture)
+import Port
 
 
 
@@ -83,7 +83,7 @@ setter card1 card2 =
 
 cardSystem : DnDList.Groups.System Card Msg
 cardSystem =
-    DnDList.Groups.createWithTouch cardConfig CardMoved onPointerMove onPointerUp releasePointerCapture
+    DnDList.Groups.createWithTouch cardConfig CardMoved Port.onPointerMove Port.onPointerUp Port.releasePointerCapture
 
 
 columnConfig : DnDList.Config (List Card)
@@ -97,7 +97,7 @@ columnConfig =
 
 columnSystem : DnDList.System (List Card) Msg
 columnSystem =
-    DnDList.createWithTouch columnConfig ColumnMoved onPointerMove onPointerUp releasePointerCapture
+    DnDList.createWithTouch columnConfig ColumnMoved Port.onPointerMove Port.onPointerUp Port.releasePointerCapture
 
 
 
