@@ -1,10 +1,8 @@
-[![Latest Version](https://img.shields.io/elm-package/v/annaghi/dnd-list.svg?label=version)](https://package.elm-lang.org/packages/annaghi/dnd-list/latest/) [![Build Status](https://travis-ci.org/annaghi/dnd-list.svg?branch=master)](https://travis-ci.org/annaghi/dnd-list)
-
 # DnD List
 
-Drag and Drop for sortable lists in Elm web apps with mouse support.
+Drag and Drop for sortable lists in Elm web apps with mouse and pointer support.
 
-[Demos and Sources](https://annaghi.github.io/dnd-list/)
+[Demos and Sources](https://ceddlyburge.github.io/dnd-list/)
 
 ### Examples
 
@@ -17,6 +15,20 @@ $ npm run watch
 
 ```elm
 create : DnDList.Config a -> Msg -> DnDList.System a Msg
+
+port onPointerMove : (Json.Encode.Value -> msg) -> Sub msg
+
+port onPointerUp : (Json.Encode.Value -> msg) -> Sub msg
+
+port releasePointerCapture : Json.Encode.Value -> Cmd msg
+
+createWithTouch :
+    Config a
+    -> (Msg -> msg)
+    -> ((Json.Encode.Value -> msg) -> Sub msg) -- onPointerMove
+    -> ((Json.Encode.Value -> msg) -> Sub msg) -- onPointerUp
+    -> (Json.Encode.Value -> Cmd msg) -- releasePointerCapture
+    -> System a msg
 ```
 
 ```elm
@@ -71,6 +83,7 @@ type alias Info =
 
 - [Risk Register](https://marketplace.atlassian.com/apps/1213146/risk-register?hosting=server&tab=overview) by ProjectBalm is a risk management add-on for Atlassian Jira.  
   _dnd-list_ is used in the risk model editor for re-ordering risk levels, and is even used to re-order the rows and columns of the risk matrix.
+- [Tournament Organiser](https://tournament-organiser.onrender.com/) helps optimise the order of games in a tournament. _dnd-list_ is used to manually tweak the game order after optimisation.
 
 ## Credits
 
