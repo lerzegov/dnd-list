@@ -1,6 +1,6 @@
 {
   "type": "package",
-  "name": "ceddlyburge/dnd-list-with-pointer",
+  "name": "ceddlyburge/dnd-list",
   "summary": "Drag and Drop for sortable lists in Elm web apps with mouse and pointer support",
   "license": "BSD-3-Clause",
   "version": "1.0.0",
