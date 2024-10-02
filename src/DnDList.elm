@@ -1,5 +1,5 @@
 module DnDList exposing
-    ( System, create, createWithTouch, Msg
+    ( System, create, createWithTouch, Msg(..)
     , Config
     , Movement(..), Listen(..), Operation(..)
     , Info
